@@ -1,0 +1,32 @@
+{
+  "name": "post-central-cli",
+  "version": "1.0.0",
+  "description": "Fetch & APIs learning exercise for HackYourFuture trainees",
+  "scripts": {
+    "start": "node --watch src/post-cli.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:me": "vitest run test-get -t getMe",
+    "test:get": "vitest run test-get",
+    "test:post": "vitest run test-post",
+    "test:crud": "vitest run test-crud"
+  },
+  "keywords": [
+    "fetch",
+    "api",
+    "rest",
+    "learning",
+    "exercise"
+  ],
+  "author": "HackYourFuture",
+  "license": "CC BY-NC-SA 4.0",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0",
+    "chalk": "^5.6.2",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}

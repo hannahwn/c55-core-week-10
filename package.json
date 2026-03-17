@@ -1,0 +1,28 @@
+{
+  "name": "core-assignment-week-10",
+  "version": "1.0.0",
+  "description": "HackYourFuture Core Program, week 10 assignment",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:task1": "vitest run task-1/tests",
+    "test:task2": "vitest run task-2/post-cli/tests",
+    "test:cocktail": "vitest run cocktail",
+    "test:me": "vitest run test-get -t getMe",
+    "test:get": "vitest run test-get",
+    "test:post": "vitest run test-post",
+    "test:crud": "vitest run test-crud"
+  },
+  "keywords": [],
+  "author": "HackYourFuture",
+  "license": "CC BY-NC-SA 4.0",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0",
+    "chalk": "^5.6.2",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}
