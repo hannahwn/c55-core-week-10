@@ -1,6 +1,8 @@
 // API documentation: https://www.thecocktaildb.com/api.php
 
+import { error } from 'console';
 import path from 'path';
+import fs from `fs/promises`
 
 const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1';
 
@@ -20,6 +22,17 @@ export async function main() {
 
   try {
     // 1. Fetch data from the API at the given URL
+    const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1`);
+    if(!response.ok){
+      const error = new error("Error with API");
+      throw error;
+    }
+    const data = await response.json();
+
+  
+  if (!data.drinks || data.drinks.length === 0) {
+    throw new Error(`No cocktails found for "${cocktailName}"`);
+  }
     // 2. Generate markdown content to match the examples
     // 3. Write the generated content to a markdown file as given by outPath
   } catch (error) {
